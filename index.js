@@ -1,4 +1,4 @@
-function changeHeading(ev) {
+function handleSubmit(ev) {
     ev.preventDefault()
     const f = ev.target
     const name = f.personName.value
@@ -13,4 +13,4 @@ function changeHeading(ev) {
     document.getElementById("stats").style.color = color
 }
   const personForm = document.querySelector('#person-form')
-  personForm.addEventListener('submit',changeHeading)
+  personForm.addEventListener('submit',handleSubmit)
