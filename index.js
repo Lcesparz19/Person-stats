@@ -18,18 +18,28 @@ function handleSubmit(ev) {
 
   const colorItem = document.createElement('li')
   colorItem.textContent = 'Favorite Color: '
-
+/*
   const colorDiv = document.createElement('div')
   colorDiv.style.backgroundColor = favoriteColor
   colorDiv.style.width = '6rem'
   colorDiv.style.height = '3rem'
+  */
+  const colorDiv = renderColor(favoriteColor)
   colorItem.appendChild(colorDiv)
+
+  
 
   list.appendChild(colorItem)
 
   const stats = document.querySelector('#stats')
   stats.appendChild(list)
 }
-
+function renderColor(favoriteColor){
+  const colorDiv = document.createElement('div')
+  colorDiv.style.backgroundColor = favoriteColor
+  colorDiv.style.width = '6rem'
+  colorDiv.style.height = '3rem'
+  return colorDiv
+}
 const personForm = document.querySelector('#person-form')
 personForm.addEventListener('submit', handleSubmit)
